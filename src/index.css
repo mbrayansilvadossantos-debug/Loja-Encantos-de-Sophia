@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Bubblegum+Sans&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Quicksand", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bubblegum Sans", cursive;
+
+  --color-pastel-pink: #FFD1DC;
+  --color-pastel-blue: #B3E5FC;
+  --color-pastel-green: #C8E6C9;
+  --color-pastel-yellow: #FFF9C4;
+  --color-pastel-purple: #E1BEE7;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-gray-800 font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+.rainbow-text {
+  background: linear-gradient(to right, #FFD1DC, #B3E5FC, #C8E6C9, #FFF9C4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.rounded-card {
+  @apply rounded-[2rem];
+}
+
+.btn-primary {
+  @apply bg-pastel-pink hover:bg-pink-300 text-gray-800 font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-md;
+}
+
+.btn-secondary {
+  @apply bg-pastel-blue hover:bg-blue-300 text-gray-800 font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-md;
+}
